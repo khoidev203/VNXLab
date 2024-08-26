@@ -1,0 +1,11 @@
+{
+    "arrowParens": "always",
+    "semi": false,
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "andOfLine": "auto",
+    "useTabs": false,
+    "singleQueto": true,
+    "printWidth": 120,
+    "jsxSingleQueto": true
+}
