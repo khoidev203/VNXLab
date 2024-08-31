@@ -21,9 +21,16 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+<<<<<<< Updated upstream
         'phone',    // Thêm phone vào fillable
         'address',  // Thêm address vào fillable
         'avatar', 
+=======
+        'avatar',
+        'phone',
+        'address',
+        'role',
+>>>>>>> Stashed changes
     ];
 
     /**
