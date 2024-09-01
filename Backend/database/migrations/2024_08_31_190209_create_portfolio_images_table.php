@@ -9,20 +9,18 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('faqs', function (Blueprint $table) {
+        Schema::create('portfolios_image', function (Blueprint $table) {
             $table->id();
-            $table->string('faq_name');
+            $table->string('portfolio_img');
+            $table->string('portfolio_vid');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('faqs');
+        Schema::dropIfExists('portfolios_image');
     }
 };

@@ -9,21 +9,18 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->string('comment_text');
-            $table->unsignedInteger('product_id');
-            $table->unsignedInteger('user_id');
+            $table->unsignedBigInteger('product_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('comments');
     }

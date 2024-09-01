@@ -9,20 +9,19 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('author', function (Blueprint $table) {
+        Schema::create('owners', function (Blueprint $table) {
             $table->id();
-            $table->string('author_name');
+            $table->string('fullname');
+            $table->string('email');
+            $table->string('phone');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('author');
+        Schema::dropIfExists('owners');
     }
 };
