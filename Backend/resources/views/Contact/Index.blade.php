@@ -2,7 +2,7 @@
 @section('content_admin')
     <h1 class="text-center text-uppercase mt-3 mb-3">Danh Sách Liên Hệ</h1>
 
-    <a href="{{ route('contact.create') }}" class="btn btn-outline-success mb-3 px-4 fs-6">Thêm Mới</a>
+    <a href="{{ route('contact.create') }}" class="btn btn-outline-success mb-3 px-4 fs-6">Add</a>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -18,12 +18,12 @@
         <tbody>
             @foreach ($contacts as $contact)
                 <tr>
-                    <td>{{ $contact->id }}</td>
-                    <td>{{ $contact->fullname }}</td>
-                    <td>{{ $contact->email }}</td>
-                    <td>{{ $contact->title }}</td>
-                    <td>{{ $contact->message }}</td>
-                    <td>{{ $contact->phone }}</td>
+                    <td style="padding-top: 20px">{{ $contact->id }}</td>
+                    <td style="padding-top: 20px">{{ $contact->fullname }}</td>
+                    <td style="padding-top: 20px">{{ $contact->email }}</td>
+                    <td style="padding-top: 20px">{{ $contact->title }}</td>
+                    <td style="padding-top: 20px">{{ $contact->message }}</td>
+                    <td style="padding-top: 20px">{{ $contact->phone }}</td>
                     <td class="d-flex gap-3">
                         <form action="{{ route('contact.destroy', $contact->id) }}" method="POST">
                             @method('DELETE')
