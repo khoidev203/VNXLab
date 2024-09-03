@@ -1,6 +1,6 @@
 @extends('Dashboard')
 @section('content_admin')
-    <h1 class="text-center text-uppercase mt-3 mb-3">Thêm Mới ...</h1>
+    <h1 class="text-center text-uppercase mt-3 mb-3">Chỉnh Sửa ...</h1>
     <form action="{{ route('contact.update', $contact->id) }}" method="POST">
         @method('PUT')
         @csrf
