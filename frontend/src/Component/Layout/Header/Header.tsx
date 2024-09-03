@@ -24,7 +24,7 @@ const Header: React.FC = () => {
                                     <Link to={"/"}>Portfolio</Link>
                                 </li>
                                 <li className="nav-list-item">
-                                    <Link to={"/"}>Liên Hệ</Link>
+                                    <Link to={"/contact"}>Liên Hệ</Link>
                                 </li>
                             </ul>
                         </div>
