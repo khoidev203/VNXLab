@@ -28,12 +28,12 @@
                         <form action="{{ route('contact.destroy', $contact->id) }}" method="POST">
                             @method('DELETE')
                             @csrf
-                            <button type="submit" class="btn btn-outline-danger px-2">Delete</button>
+                            <button type="submit" class="btn btn-outline-danger px-2" onclick="return confirm('Bạn có muốn xóa không?')">Delete</button>
                         </form>
                         <a href="{{ route('contact.edit', $contact->id) }}" class="btn btn-outline-warning">Edit</a>
                     </td>
                 </tr>
             @endforeach
-        </tbody>
+        </tbody>    
     </table>
 @endsection

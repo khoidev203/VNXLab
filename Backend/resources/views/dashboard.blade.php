@@ -103,8 +103,8 @@
 
                         </a>
                         <ul class="submenu">
-                            <li><a >Category List</a></li>
-                            <li><a >Create Category</a></li>
+                            <li><a href="{{ route('category.index') }}" >Category List</a></li>
+                            <li><a href="{{ route('category.create') }}" >Create Category</a></li>
                         </ul>
                     </li>
                     <li>
