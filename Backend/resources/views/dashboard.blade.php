@@ -121,6 +121,12 @@
                         </a>
                     </li>
                     <li>
+                        <a  href="{{route('comment.index')}}" class="dropdown-toggle no-arrow">
+                            <span><i class="fa-regular fa-comment"></i></span>
+                            <span class="mtext">Comment</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="calendar.html" class="dropdown-toggle no-arrow">
                             <span><i class="fa-solid fa-chart-simple"></i></span>
                             <span class="mtext">Statistics</span>
