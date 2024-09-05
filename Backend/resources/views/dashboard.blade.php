@@ -23,13 +23,34 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/Style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/core.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/icon-font.min.css') }}">
+    <style>
+        .header-right .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
 
+.header-right .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.header-right img {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+    </style>
 
 </head>
 
 <body>
 
     <div class="header">
+        
         <div class="header-left">
             <div class="header-search">
                 <form method="GET">
@@ -44,6 +65,19 @@
                     </div>
                 </form>
             </div>
+        </div>
+        <div class="header-right">
+            <li>
+                <a class="dropdown-item" href="#" 
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+            </li>
+            
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+            
         </div>
     </div>
     <div class="left-side-bar">
@@ -105,8 +139,8 @@
 
                         </a>
                         <ul class="submenu">
-                            <li><a href="{{ route('category.index') }}" >Category List</a></li>
-                            <li><a href="{{ route('category.create') }}" >Create Category</a></li>
+                            <li><a href="{{ route('category.index') }}">Category List</a></li>
+                            <li><a href="{{ route('category.create') }}">Create Category</a></li>
                         </ul>
                     </li>
                     <li>
