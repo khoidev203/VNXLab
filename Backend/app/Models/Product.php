@@ -18,10 +18,11 @@ class Product extends Model
         'title',
         'summary',
         'keywords',
+        'published_at',
+        'author_id',
         'category_id',
         'file_url',
-        'author_id',
-        'tag_id',
+        'views_count'
     ];
 
     /**

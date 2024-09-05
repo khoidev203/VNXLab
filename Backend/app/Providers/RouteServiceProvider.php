@@ -59,8 +59,8 @@ class RouteServiceProvider extends ServiceProvider
             //     ->group(base_path('routes/api/product_tags.php'));  
 
             // CRUD routes for web
-            // Route::middleware('web')
-            //     ->group(base_path('routes/web/products.php'));
+            Route::middleware('web')
+                ->group(base_path('routes/web/products.php'));
 
             Route::middleware('web')
                 ->group(base_path('routes/web/categories.php'));

@@ -127,8 +127,8 @@
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                         <ul class="submenu">
-                            <li><a>Product List</a></li>
-                            <li><a>Create Product</a></li>
+                            <li><a href="{{ route('product.index') }}">Product List</a></li>
+                            <li><a {{ route('product.create') }}>Create Product</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
