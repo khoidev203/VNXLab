@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('summary')->nullable();
-            $table->string('keywords')->nullable();
-            $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            $table->text('summary');
+            $table->string('keywords');
+            $table->dateTime('published_at');
+            $table->foreignId('author_id')->constrained('authors')->onDelete('cascade');
+            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             $table->string('file_url');
-            $table->foreignId('author_id')->constrained()->onDelete('cascade');
+            $table->integer('views_count')->default(0);
             $table->timestamps();
         });
     }
