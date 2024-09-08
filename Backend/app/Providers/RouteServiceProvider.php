@@ -54,6 +54,14 @@ class RouteServiceProvider extends ServiceProvider
             ->prefix('api')
             ->group(base_path('routes/api/comments.php'));
 
+            Route::middleware('api')
+            ->prefix('api')
+            ->group(base_path('routes/api/authors.php'));
+
+            Route::middleware('api')
+            ->prefix('api')
+            ->group(base_path('routes/api/owners.php'));
+
             // Route::middleware('api')
             //     ->prefix('api')
             //     ->group(base_path('routes/api/news.php'));
@@ -86,6 +94,12 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web/comments.php'));
+
+            Route::middleware('web')
+            ->group(base_path('routes/web/authors.php'));
+
+            Route::middleware('web')
+            ->group(base_path('routes/web/owners.php'));
 
                 
             Route::middleware('web')

@@ -127,6 +127,18 @@
                         </a>
                     </li>
                     <li>
+                        <a  href="{{route('author.index')}}" class="dropdown-toggle no-arrow">
+                            <span><i class="fa-solid fa-user-tie"></i></span>
+                            <span class="mtext">Author</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="{{route('owner.index')}}" class="dropdown-toggle no-arrow">
+                            <span><i class="fa-solid fa-person"></i></span>
+                            <span class="mtext">Owner</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="calendar.html" class="dropdown-toggle no-arrow">
                             <span><i class="fa-solid fa-chart-simple"></i></span>
                             <span class="mtext">Statistics</span>
