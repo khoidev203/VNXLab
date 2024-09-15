@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/Style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/core.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/icon-font.min.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         .header-right .dropdown-menu {
     display: none;
@@ -160,6 +161,18 @@
                         <a href="calendar.html" class="dropdown-toggle no-arrow">
                             <span><i class="fa-solid fa-chart-simple"></i></span>
                             <span class="mtext">Statistics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('tags.index') }}" class="dropdown-toggle no-arrow">
+                            <span><i class="fa-solid fa-chart-simple"></i></span>
+                            <span class="mtext">Tag</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('faqs.index') }}" class="dropdown-toggle no-arrow">
+                            <span><i class="fa-solid fa-chart-simple"></i></span>
+                            <span class="mtext">FAQs</span>
                         </a>
                     </li>
                     <li>

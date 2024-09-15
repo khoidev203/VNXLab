@@ -53,7 +53,9 @@ class RouteServiceProvider extends ServiceProvider
             // Route::middleware('api')
             //     ->prefix('api')
             //     ->group(base_path('routes/api/news.php'));
-
+            Route::middleware('api')
+                ->prefix('api')
+                ->group(base_path('routes/api/faqs.php'));
             // Route::middleware('api')
             //     ->prefix('api')
             //     ->group(base_path('routes/api/product_tags.php'));  
@@ -65,8 +67,8 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->group(base_path('routes/web/categories.php'));
 
-            // Route::middleware('web')
-            //     ->group(base_path('routes/web/tags.php'));
+            Route::middleware('web')
+                ->group(base_path('routes/web/tags.php'));
 
             // Route::middleware('web')
             //     ->group(base_path('routes/web/authors.php'));
@@ -88,6 +90,8 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web/auth.php'));
+            Route::middleware('web')
+                ->group(base_path('routes/web/faq.php'));
         });
     }
 }
