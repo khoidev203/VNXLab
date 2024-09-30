@@ -5,6 +5,7 @@ import Register from "../Layout/Register/Register"
 import ForgotPassword from "../Layout/ForgotPassword/ForgotPassword"
 import Contact from "../Layout/Contact/Contact"
 import Portfolio from "../Layout/Portfolio/Portfolio"
+import ProductResearch from "../Layout/ProductResearch/ProductResearch"
 
 const AppContainer: React.FC = () => {
     return (
@@ -16,6 +17,7 @@ const AppContainer: React.FC = () => {
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/productResearch" element={<ProductResearch />} />
             </Routes>
         </>
     )
